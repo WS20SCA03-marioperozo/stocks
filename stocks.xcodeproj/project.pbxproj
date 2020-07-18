@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		B205A73C24C28DF400EFF807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B205A73A24C28DF400EFF807 /* Main.storyboard */; };
 		B205A73E24C28DF600EFF807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B205A73D24C28DF600EFF807 /* Assets.xcassets */; };
 		B205A74124C28DF600EFF807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B205A73F24C28DF600EFF807 /* LaunchScreen.storyboard */; };
+		B205A74A24C28FD100EFF807 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = B205A74924C28FD100EFF807 /* SwiftSoup */; };
+		B205A74C24C2901300EFF807 /* stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B205A74B24C2901300EFF807 /* stock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		B205A73D24C28DF600EFF807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B205A74024C28DF600EFF807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B205A74224C28DF600EFF807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B205A74B24C2901300EFF807 /* stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B205A74A24C28FD100EFF807 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 				B205A73424C28DF400EFF807 /* AppDelegate.swift */,
 				B205A73624C28DF400EFF807 /* SceneDelegate.swift */,
 				B205A73824C28DF400EFF807 /* ViewController.swift */,
+				B205A74B24C2901300EFF807 /* stock.swift */,
 				B205A73A24C28DF400EFF807 /* Main.storyboard */,
 				B205A73D24C28DF600EFF807 /* Assets.xcassets */,
 				B205A73F24C28DF600EFF807 /* LaunchScreen.storyboard */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = stocks;
+			packageProductDependencies = (
+				B205A74924C28FD100EFF807 /* SwiftSoup */,
+			);
 			productName = stocks;
 			productReference = B205A73124C28DF400EFF807 /* stocks.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = B205A72824C28DF400EFF807;
+			packageReferences = (
+				B205A74824C28FD100EFF807 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = B205A73224C28DF400EFF807 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +151,7 @@
 			files = (
 				B205A73924C28DF400EFF807 /* ViewController.swift in Sources */,
 				B205A73524C28DF400EFF807 /* AppDelegate.swift in Sources */,
+				B205A74C24C2901300EFF807 /* stock.swift in Sources */,
 				B205A73724C28DF400EFF807 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B205A74824C28FD100EFF807 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B205A74924C28FD100EFF807 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B205A74824C28FD100EFF807 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B205A72924C28DF400EFF807 /* Project object */;
 }
